@@ -39,3 +39,12 @@ var games = [
     rating: 2.9,
   },
 ];
+
+var titleAndRating = document.querySelector("ul");
+
+for (var i = 0; i <= games.length; i++) {
+  if (games[i].rating < 3.5) {
+    titleAndRating.innerHTML +=
+      "<li>" + games[i].title + ": " + games[i].rating + "</li>";
+  }
+}

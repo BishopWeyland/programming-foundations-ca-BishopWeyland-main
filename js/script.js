@@ -42,7 +42,7 @@ var games = [
 
 var titleAndRating = document.querySelector("ul");
 
-for (var i = 0; i <= games.length; i++) {
+for (var i = 0; i < games.length; i++) {
   if (games[i].rating < 3.5) {
     titleAndRating.innerHTML +=
       "<li>" + games[i].title + ": " + games[i].rating + "</li>";
@@ -51,12 +51,12 @@ for (var i = 0; i <= games.length; i++) {
 
 // Question 4
 
-function whatIDontLike(rawTomatoes) {
-  if (typeof rawTomatoes === "boolean") {
-    console.log("I don't like ", rawTomatoes);
+function whatIDontLike(thisFood) {
+  if (typeof thisFood === "string") {
+    console.log("I don't like", thisFood);
   } else {
     console.log("Please send a string");
   }
 }
 
-whatIDontLike(true);
+whatIDontLike("raw tomatoes");

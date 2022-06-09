@@ -66,13 +66,13 @@ whatIDontLike("raw tomatoes");
 var subtraction = document.querySelector("#subtraction");
 
 function subtractNumbers(number1, number2) {
-  return number1 - number2;
-  if (typeof number1 || typeof number2 === "string") {
+  if (typeof number1 || typeof number2 !== "number") {
     parseInt(number1, number2);
   }
+  return number1 - number2;
 }
 
-var result = subtractNumbers("100", "400");
+var result = subtractNumbers(null, 123);
 
 subtraction.innerHTML = result;
 if (isNaN(result)) {
@@ -88,8 +88,8 @@ var ul = document.querySelector("ul");
 
 function changePage() {
   title.innerHTML = "Updated title";
-
-  heading.style.color = "green";
+  heading.innerHTML = `<a href="#">Programming Foundations Course Assignment</a>`;
+  heading.style.color = "green"; // Won't change color because of <a> specificity
   heading.style.fontFamily = "impact";
   body.style.backgroundColor = "yellow";
   ul.style.listStyle = "none";
@@ -97,3 +97,40 @@ function changePage() {
 }
 
 pageButton.onclick = changePage;
+
+// Question 7
+
+var priceButton = document.querySelector(".price");
+var total = document.querySelector("#total");
+
+var toys = [
+  {
+    name: "Lego",
+    price: 15.6,
+  },
+  {
+    name: "Master of the Universe",
+    price: "28.3",
+  },
+  {
+    name: "Barbie",
+    price: null,
+  },
+  {
+    name: "Mr Potato Head",
+    price: 89.99,
+  },
+];
+
+function addPriceTotal() {
+  var sum = 0;
+  for (var i = 0; i < toys.length; i++) {
+    if (toys[i].price === null) {
+      toys[i].price = 0;
+    }
+    sum += parseFloat(toys[i].price);
+  }
+  total.innerHTML = sum;
+}
+
+priceButton.onclick = addPriceTotal;

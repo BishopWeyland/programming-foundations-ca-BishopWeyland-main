@@ -48,3 +48,15 @@ for (var i = 0; i <= games.length; i++) {
       "<li>" + games[i].title + ": " + games[i].rating + "</li>";
   }
 }
+
+// Question 4
+
+function whatIDontLike(rawTomatoes) {
+  if (typeof rawTomatoes === "boolean") {
+    console.log("I don't like ", rawTomatoes);
+  } else {
+    console.log("Please send a string");
+  }
+}
+
+whatIDontLike(true);

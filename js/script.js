@@ -72,7 +72,7 @@ function subtractNumbers(number1, number2) {
   return number1 - number2;
 }
 
-var result = subtractNumbers(null, 123);
+var result = subtractNumbers("100", "400");
 
 subtraction.innerHTML = result;
 if (isNaN(result)) {

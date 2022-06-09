@@ -60,3 +60,5 @@ function whatIDontLike(thisFood) {
 }
 
 whatIDontLike("raw tomatoes");
+
+// Question 5

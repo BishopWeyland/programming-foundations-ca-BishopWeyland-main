@@ -62,3 +62,38 @@ function whatIDontLike(thisFood) {
 whatIDontLike("raw tomatoes");
 
 // Question 5
+
+var subtraction = document.querySelector("#subtraction");
+
+function subtractNumbers(number1, number2) {
+  return number1 - number2;
+  if (typeof number1 || typeof number2 === "string") {
+    parseInt(number1, number2);
+  }
+}
+
+var result = subtractNumbers("100", "400");
+
+subtraction.innerHTML = result;
+if (isNaN(result)) {
+  subtraction.innerHTML = "Invalid argument(s).";
+}
+
+// Question 6
+var title = document.querySelector("title");
+var heading = document.querySelector("h1");
+var pageButton = document.querySelector(".page");
+var body = document.querySelector("body");
+var ul = document.querySelector("ul");
+
+function changePage() {
+  title.innerHTML = "Updated title";
+
+  heading.style.color = "green";
+  heading.style.fontFamily = "impact";
+  body.style.backgroundColor = "yellow";
+  ul.style.listStyle = "none";
+  ul.style.padding = "0px";
+}
+
+pageButton.onclick = changePage;
